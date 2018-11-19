@@ -1,0 +1,18 @@
+// based on a keyboard map from an 'xkb/symbols/pl' file
+
+default  partial alphanumeric_keys
+xkb_symbols "basic" {
+    name[Group1]="Polish Personal";
+
+    include "pl"
+
+    name[Group1]="Polish Personal";
+
+    key <RCTL> { [ Hyper_R ] };
+
+    modifier_map Mod3 { <HYPR> };
+    modifier_map Mod3 { <RCTL> };
+
+    include "level3(ralt_switch_multikey)"
+};
+
