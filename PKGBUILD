@@ -9,7 +9,7 @@
 # Maintainer: Michal Knapik
 _pkgname=personal-keymap
 pkgname=${_pkgname}-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=r2.871390e
+pkgver=r3.0a66700
 pkgrel=1
 pkgdesc="Polish Keyboard with Caps Lock mapped to Control."
 arch=('x86_64')
@@ -41,8 +41,8 @@ pkgver() {
 package() {
 	cd "$srcdir/${_pkgname}"
     mkdir -p ${pkgdir}/usr/local/share/kbd/keymaps/
-    mkdir -p ${pkgdir}/usr/local/share/X11/xkb/symbols/
+    mkdir -p ${pkgdir}/usr/share/X11/xkb/symbols/
     cat personal.map | gzip > ${pkgdir}/usr/local/share/kbd/keymaps/personal.map.gz
-    cp personal ${pkgdir}/usr/local/share/X11/xkb/symbols/personal
+    cp personal ${pkgdir}/usr/share/X11/xkb/symbols/personal
 }
 
