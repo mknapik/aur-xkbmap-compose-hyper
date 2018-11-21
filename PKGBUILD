@@ -9,7 +9,7 @@
 # Maintainer: Michal Knapik
 _pkgname=personal-keymap
 pkgname=${_pkgname}-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=r3.0a66700
+pkgver=r4.3c6ad80
 pkgrel=1
 pkgdesc="Polish Keyboard with Caps Lock mapped to Control."
 arch=('x86_64')

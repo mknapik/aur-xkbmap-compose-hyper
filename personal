@@ -8,10 +8,10 @@ xkb_symbols "basic" {
 
     name[Group1]="Polish Personal";
 
-    key <RCTL> { [ Hyper_R ] };
+    key <COMP> { [ Hyper_R ] };
 
     modifier_map Mod3 { <HYPR> };
-    modifier_map Mod3 { <RCTL> };
+    modifier_map Mod3 { <COMP> };
 
     include "level3(ralt_switch_multikey)"
 };
