@@ -7,13 +7,13 @@
 # Other VCS sources are not natively supported by makepkg yet.
 
 # Maintainer: Michal Knapik
-_pkgname=personal-keymap
+_pkgname=xkbmap-compose-hyper
 pkgname=${_pkgname}-git # '-bzr', '-git', '-hg' or '-svn'
 pkgver=r4.3c6ad80
 pkgrel=1
-pkgdesc="Polish Keyboard with Caps Lock mapped to Control."
+pkgdesc="Polish keyboard with Menu/Compose mapped to Hyper."
 arch=('x86_64')
-url="https://github.com/mknapik/aur-personal-keymap"
+url="https://github.com/mknapik/aur-xkbmap-compose-hyper"
 license=('MIT')
 groups=()
 depends=()
@@ -24,7 +24,7 @@ replaces=()
 backup=()
 options=()
 install=
-source=("$_pkgname::git+https://github.com/mknapik/aur-personal-keymap.git#branch=master")
+source=("$_pkgname::git+https://github.com/mknapik/aur-xkbmap-compose-hyper.git#branch=master")
 noextract=()
 md5sums=('SKIP')
 
@@ -40,9 +40,7 @@ pkgver() {
 
 package() {
 	cd "$srcdir/${_pkgname}"
-    mkdir -p ${pkgdir}/usr/local/share/kbd/keymaps/
     mkdir -p ${pkgdir}/usr/share/X11/xkb/symbols/
-    cat personal.map | gzip > ${pkgdir}/usr/local/share/kbd/keymaps/personal.map.gz
     cp personal ${pkgdir}/usr/share/X11/xkb/symbols/personal
 }
 
