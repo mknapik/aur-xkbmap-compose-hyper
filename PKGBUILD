@@ -9,7 +9,7 @@
 # Maintainer: Michal Knapik
 _pkgname=xkbmap-compose-hyper
 pkgname=${_pkgname}-git # '-bzr', '-git', '-hg' or '-svn'
-pkgver=r4.3c6ad80
+pkgver=r6.3515543
 pkgrel=1
 pkgdesc="Polish keyboard with Menu/Compose mapped to Hyper."
 arch=('x86_64')
@@ -19,7 +19,7 @@ groups=()
 depends=()
 makedepends=('git') # 'bzr', 'git', 'mercurial' or 'subversion'
 provides=("${_pkgname}")
-conflicts=("${_pkgnam}")
+conflicts=("${_pkgname}")
 replaces=()
 backup=()
 options=()
